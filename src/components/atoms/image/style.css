@@ -1,0 +1,25 @@
+/* Size */
+.small {
+  width: 50%
+}
+
+.medium {
+  width: 70%;
+}
+
+.big {
+  width: 100%;
+}
+
+/* Type */
+.hero {
+  z-index: -1;
+  margin-bottom: -200px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.product {
+  max-height: 200px;
+  object-fit: contain;
+}
+

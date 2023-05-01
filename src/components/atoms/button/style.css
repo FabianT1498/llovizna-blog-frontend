@@ -1,0 +1,80 @@
+@import '../../_settings/_variables.css';
+
+.button {
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Size */
+.small {
+  padding: 0.2rem 0.4rem;
+}
+
+.medium {
+  padding: 1rem 1.1rem;
+}
+
+.large {
+  padding: 1.2rem 1.3rem;
+}
+
+/* Width */
+
+.p-30 {
+  width: 30%;
+}
+
+.p-50 {
+  width: 50%;
+}
+
+.p-70 {
+  width: 70%;
+}
+
+.full {
+  width: 100%
+}
+
+/* Theme */
+.default {
+
+  color: var(--black);
+  background-color: var(--button-default-background);
+  border-radius: 3px;
+  text-align: center;
+  transition: all 3ms ease-in-out;
+
+  &:hover, &:active {
+    background: linear-gradient(to bottom, var(--color-grey-light-1), var(--color-grey-light-2))
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &--error {
+    transform: translateY(15px);
+  
+    &:active {
+      transform: scale(0.99) translateY(15px);
+    }
+  }
+}
+
+.product {
+  color: var(--black);
+  background-color: var(--button-background);
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 3px;
+
+  &:hover, &:active {
+    background: linear-gradient(to bottom, #f5d78e,#eeb933);
+  }
+}

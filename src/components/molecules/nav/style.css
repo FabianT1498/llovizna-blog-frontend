@@ -1,0 +1,14 @@
+@import '../../_settings/_variables.css';
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 1rem;
+    flex: 0 30%;
+
+    @media (--tab-land-viewport) {
+        flex: 0 35%;
+    }
+
+}

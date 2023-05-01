@@ -1,0 +1,24 @@
+@import '../../_settings/_variables.css';
+
+.order {
+    background-color: var(--white);
+    padding: 2rem;
+    margin: 1rem 0;
+    border: 1px solid var(--color-grey-light-1);
+    
+}
+
+.order-header {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.order-id {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.order-total {
+    text-align: right;
+}

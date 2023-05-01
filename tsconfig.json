@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "lib": ["DOM", "ES2020"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "types": ["react"],
+    "moduleResolution": "node",
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
+      "@context/*": ["src/context/*"],
+      "@utilities/*": ["src/utilities/*"]
+    }
+  },
+  "include": [
+    "src/index.tsx"
+  ]
+}
+

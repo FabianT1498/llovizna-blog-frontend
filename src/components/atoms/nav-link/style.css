@@ -1,0 +1,66 @@
+@import '../../_settings/_variables.css';
+
+.link:link, .link:visited {
+  transition: all .1s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Size */
+.small {
+  padding: 0.2rem 0.4rem;
+}
+
+.medium {
+  padding: 1rem 1.1rem;
+}
+
+.large {
+  padding: 1.2rem 1.3rem;
+}
+
+/* Width */
+.p-30 {
+  width: 30%;
+}
+
+.p-50 {
+  width: 50%;
+}
+
+.p-70 {
+  width: 70%;
+}
+
+.full {
+  width: 100%
+}
+
+/* Theme */
+.default {
+
+  &:visited, &:link {
+    color: var(--link-anchor-color);
+    line-height: 1.5;
+  }
+  
+  &:hover, &:active {
+    text-decoration: underline;
+    color: var(--link-anchor-color-hover);
+  }
+}
+
+.button {
+
+  &:visited, &:link {
+    display: inline-block;
+    color: var(--black);
+    border: 1px solid var(--color-grey-light-2);
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  &:hover, &:active {
+    background: linear-gradient(to bottom, var(--color-grey-light-1), var(--color-grey-light-2))
+  }
+}

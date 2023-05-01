@@ -1,0 +1,45 @@
+@import '../../_settings/_variables.css';
+
+.form {
+    animation: fade 200ms ease-out;
+}
+  
+.form-group {
+  margin-bottom: 1.2rem;
+  border-style: none;
+  background-color: var(--payment-form-group-background);
+  will-change: opacity, transform;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.card-container {
+  padding: 0.8rem 0.5rem;
+}
+
+.info {
+  margin-bottom: 1rem;
+}
+
+.result {
+  margin-top: 50px;
+  text-align: center;
+  animation: fade 200ms ease-out;
+}
+  
+.result-title {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 17px;
+  text-align: center;
+}
+  
+.result-message {
+  color: #9cdbff;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  line-height: 1.6em;
+  text-align: center;
+}

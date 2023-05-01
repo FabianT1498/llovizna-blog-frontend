@@ -1,0 +1,26 @@
+@import '../../_settings/_variables.css';
+
+.subtotal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 150px;
+
+    .gift {
+        display:flex;
+        align-items: center;
+
+        & > input {
+            margin-right: 5px;
+        }
+    }
+}
+
+/* THEME */
+
+.default {
+    background-color: var(--color-grey-light-1);
+    border: 1px solid var(--color-grey-light-2);
+    border-radius: 3px;
+}

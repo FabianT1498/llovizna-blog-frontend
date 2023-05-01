@@ -1,0 +1,46 @@
+@import '../../_settings/_variables.css';
+
+.checkout {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+    background-color: var(--white);
+    justify-content: space-between;
+
+    .ad-container {
+        margin-bottom: 0.5rem;
+    }
+
+    .products-header {
+        border-bottom: 1px solid var(--color-grey-light-1);
+        padding-bottom: 0.5rem;
+    }
+
+    .products-list {
+        background-color: #f3f1f1;
+        padding: 1rem;
+    }
+
+    & > div {
+        flex: 0 0 70%;
+
+        &:last-child {
+            flex: 0 0 25%;
+        }
+    }
+
+    @media (--tab-land-viewport) {
+
+        .products-list {
+            font-size: 0.88em;
+        }
+
+        & > div {
+            flex: 0 0 60%;
+    
+            &:last-child {
+                flex: 0 0 35%;
+            }
+        }
+    }
+}

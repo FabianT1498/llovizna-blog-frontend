@@ -1,0 +1,28 @@
+@import '../../_settings/_variables.css';
+
+.product {
+    background-color: var(--white);
+    z-index: 1;
+    box-shadow: 0 2px 2px #efefef;
+    border-radius: 3px;
+    font-size: 0.65rem;
+
+    & > .section {
+        padding: 0.75rem;
+        border-bottom: 1px solid var(--color-grey-light-1);
+        
+        &:first-child {
+            background-color: #fcfcfc;
+        }
+
+        &:last-child {
+            border: 0;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @media (--tab-land-viewport) {
+        font-size: 0.75rem;
+    }
+}

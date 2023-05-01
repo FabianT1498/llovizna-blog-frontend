@@ -1,0 +1,10 @@
+@import '../../_settings/_variables.css';
+
+.orders {
+    padding: 1rem 3rem;
+}
+
+.orders-header {
+    margin-bottom: 1rem;
+}
+
