@@ -8,6 +8,7 @@ import Login from '@components/pages/login'
 
 const App = () => {
   return (
+
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Router>

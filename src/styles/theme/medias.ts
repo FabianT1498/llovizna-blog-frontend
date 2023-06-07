@@ -13,7 +13,8 @@ $breakpoint arguement choices:
 - tab-land
 - big-desktop
 
-ORDER: Base + typography > general layout + grid > page layout > components
+ORDER: Base + typography > general layout + grid > page layout > cimport Medias from './typings/medias.interface'
+omponents
 
 1em = 16px
 */

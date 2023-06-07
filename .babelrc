@@ -2,11 +2,11 @@
   "plugins": [
     "@babel/plugin-transform-react-inline-elements",
     "transform-inline-environment-variables",
-    "styled-components"
+    "babel-plugin-styled-components"
   ],
   "presets": [
     "@babel/preset-env",
-    "@babel/preset-react",
+    "@babel/preset-react"
   ],
   "env": {
     "development": {

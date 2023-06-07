@@ -1,48 +1,20 @@
 import styled from 'styled-components'
 
-import { Theme } from '@styles/theme/typings/theme.interface'
+import Box from '@components/atoms/box/box.styles'
 
 type Props = {
-  theme: Theme,
-  padding: string,
-  margin
-  // otras propiedades que recibe el componente
+  direction?: string,
 }
 
-const Form = styled.form`
+const Form = styled(Box).attrs({
+  as: 'form',
+})`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: ${(props: Props) => props.theme.colors.grey.light['100']};
-;
+  flex-direction: ${({ direction }: Props) => direction};
 `
 
-
-e
-.form {
-
-    label {
-        font-size: 0.7rem;
-        font-weight: 800;
-        margin-bottom: 0.25rem;
-        display: block;
-    }
-
-    .section {
-        margin-bottom: 0.5rem;
-
-        &:last-of-type {
-            margin-bottom: 0.8rem;
-        }
-    }
+Form.defaultProps = {
+  direction: 'column',
 }
 
-/* THEME */
-
-.default {
-    background-color: var(--white);
-
-    &:focus-within {
-        box-shadow: 0 0 0 2px var(--color-secondary),0 0 0 3px rgba(255,153,0,.5);
-    }
-}
+export { Form }

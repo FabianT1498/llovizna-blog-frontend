@@ -1,12 +1,11 @@
 import FontSize from './typings/fontSizes.interface'
 
 const fontSize: FontSize = {
-  fontSizes: {
-    body: '1rem', // Tamaño base de fuente para los párrafos
-    heading1: '2rem', // Tamaño de fuente para los encabezados h1
-    heading2: '1.75rem', // Tamaño de fuente para los encabezados h2
-    heading3: '1.5rem', // Tamaño de fuente para los encabezados h3
-    small: '0.875rem', // Tamaño de fuente para el texto pequeño
+  headings: {
+    H1: '2rem', // Tamaño de fuente para los encabezados h1
+    H2: '1.75rem', // Tamaño de fuente para los encabezados h2
+    H3: '1.3rem', // Tamaño de fuente para los encabezados h3
+    H4: '1.25rem',
   },
   baseFontSize: {
     tabPort: '100%', // 1 rem = 16px; 20px/16px = 100%

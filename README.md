@@ -8,11 +8,6 @@
 |`$ yarn storybook`| Start Storybook with the stories imported |
 |`$ yarn flow`| Validate the flow types |
 
-## Test credentials
-user: test2@test.com
-
-password: test123
-
 ## Libraries
 
 - Webpack

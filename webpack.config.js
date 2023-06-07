@@ -20,29 +20,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(tsx|ts)$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
           },
           { loader: 'ts-loader' },
         ],
-        exclude: /node_modules/,
       },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
-      // {
-      //   test: /\.css$/,
-      //   exclude: /node_modules/,
-      //   use: [
-      //     {
-      //       loader: 'css-loader',
-      //     },
-      //   ],
-      // },
       {
         test: /\.svg$/,
         use: [
