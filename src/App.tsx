@@ -1,16 +1,16 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { ThemeProvider } from 'styled-components'
 
-import GlobalStyle from '@styles/global'
+import { ChakraBaseProvider } from '@chakra-ui/react'
+
+import { Fonts } from '@styles/global/font'
 import theme from '@styles/theme'
 import Login from '@components/pages/login'
 
 const App = () => {
   return (
-
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+    <ChakraBaseProvider theme={theme}>
+      <Fonts />
       <Router>
         <Switch>
           <Route path="/">
@@ -18,7 +18,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-    </ThemeProvider>
+    </ChakraBaseProvider>
   )
 }
 

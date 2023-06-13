@@ -1,8 +1,9 @@
 import React from 'react'
 
-import { LoginContainer, LoginCard } from './login.styles'
+// import { LoginContainer, LoginCard } from './login.styles'
+// import { Form } from '@components/organisms/form'
+
 import { H2 } from '@components/atoms/heading/heading.styles'
-import { Form } from '@components/organisms/form'
 
 type Props = {
   children?: React.ReactNode,
@@ -10,16 +11,7 @@ type Props = {
 }
 
 const Login = (props: Props) => {
-  return (
-    <LoginContainer>
-      <LoginCard>
-        <H2>Login</H2>
-        <Form>
-          <input type="text" />
-        </Form>
-      </LoginCard>
-    </LoginContainer>
-  )
+  return <H2>Hola mundo</H2>
 }
 
 Login.defaultProps = {
