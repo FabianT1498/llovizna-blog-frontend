@@ -7,10 +7,13 @@ import { Fonts } from '@styles/global/font'
 import theme from '@styles/theme'
 import Login from '@components/pages/login'
 
+// import AuthProvider from '@context/auth/authContext'
+
 const App = () => {
   return (
     <ChakraBaseProvider theme={theme}>
       <Fonts />
+
       <Router>
         <Switch>
           <Route path="/">

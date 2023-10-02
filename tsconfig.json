@@ -10,7 +10,7 @@
     "jsx": "react",
     "outDir": "./dist",
     "noImplicitAny": true,
-    "types": ["react"],
+    "types": ["react", "node"],
     "moduleResolution": "node",
     "allowJs": true,
     "baseUrl": ".",
@@ -19,7 +19,9 @@
       "@components/*": ["src/components/*"],
       "@styles/*": ["src/styles/*"],
       "@context/*": ["src/context/*"],
-      "@utilities/*": ["src/utilities/*"]
+      "@utils/*": ["src/utils/*"],
+      "@validations/*": ["src/validations/*"],
+      "@services/*": ["src/services/*"]
     }
   },
   "include": [

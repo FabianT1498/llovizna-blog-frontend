@@ -1,28 +1,42 @@
-import styled from 'styled-components'
+import React from 'react'
+import { chakra, Container } from '@chakra-ui/react'
 
-import { Theme } from '@styles/theme/typings/theme.interface'
-
-type Props = {
-  theme: Theme,
-  // otras propiedades que recibe el componente
+const loginContainerStyles = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: { base: 'end', sm: 'center' },
+  alignItems: 'center',
+  h: '100vh',
+  bgColor: 'brand.primary.main',
+  padding: '0',
+  w: 'full',
+  maxWidth: 'full',
 }
 
-const LoginContainer = styled.div`
-  font-size: 0.65rem;
-  background-color: ${(props: Props) => props.theme.colors.grey.light['100']};
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1rem;
-`
-const LoginCard = styled.div`
-  width: 300px;
-  height: fit-content;
-  border-radius: 5px;
-  border: 1px solid ${(props: Props) => props.theme.colors.grey.light['200']};
-  padding: 1rem;
-  margin-bottom: 1rem;
-`
+const alertContainerStyles = {
+  w: { base: '80%' },
+  mb: { base: '5' },
+}
 
-export { LoginContainer, LoginCard }
+const formContainerStyles = {
+  bgColor: 'white',
+  borderTopRadius: '2xl',
+  borderBottomRadius: { base: 'none', sm: '2xl' },
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: { base: 'space-between' },
+  alignItems: 'center',
+  padding: '8',
+  h: { base: '75%', md: '80%' },
+}
+
+const BaseLoginContainer = chakra(Container)
+const LoginContainer = (props: any) => <BaseLoginContainer sx={loginContainerStyles} {...props} />
+
+const BaseFormContainer = chakra(Container)
+const FormContainer = (props: any) => <BaseFormContainer sx={formContainerStyles} {...props} />
+
+const BaseAlertContainer = chakra(Container)
+const AlertContainer = (props: any) => <BaseAlertContainer sx={alertContainerStyles} {...props} />
+
+export { LoginContainer, FormContainer, AlertContainer }

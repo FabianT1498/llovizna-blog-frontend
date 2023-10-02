@@ -1,20 +1,11 @@
-import styled from 'styled-components'
+import { chakra } from '@chakra-ui/react'
 
-import Box from '@components/atoms/box/box.styles'
+const FormContainer = chakra('form', {
+  baseStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+})
 
-type Props = {
-  direction?: string,
-}
-
-const Form = styled(Box).attrs({
-  as: 'form',
-})`
-  display: flex;
-  flex-direction: ${({ direction }: Props) => direction};
-`
-
-Form.defaultProps = {
-  direction: 'column',
-}
-
-export { Form }
+export { FormContainer }

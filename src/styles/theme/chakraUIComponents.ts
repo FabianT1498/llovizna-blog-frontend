@@ -1,5 +1,5 @@
 import chakraTheme from '@chakra-ui/theme'
 
-const { Button, Heading } = chakraTheme.components
+const { Button, Heading, Container, FormLabel, Input, FormError, Alert, Link } = chakraTheme.components
 
-export { Button, Heading }
+export { Button, Heading, Container, FormLabel, Input, FormError, Alert, Link }

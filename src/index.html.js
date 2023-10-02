@@ -11,7 +11,7 @@ module.exports = (initialHtml = '', paths = DEFAULT_PATHS) =>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#FFFFFF">
-  <title>Bills Payable System</title>
+  <title>Llovizna runners blog</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
