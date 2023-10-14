@@ -4,11 +4,7 @@ const handleAsync = async <T>(asyncFunction: Function): Promise<ServerResponse<T
     const result = await asyncFunction()
     return result
   } catch (error: any) {
-    if (error?.response && error.response?.data) {
-      return error.response.data
-    }
-
-    return error
+    return error.data
   }
 }
 

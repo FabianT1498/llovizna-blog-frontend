@@ -32,7 +32,7 @@ const Login = (props: Props) => {
           <LoginForm setShowAlert={setShowAlert} setErrorMessage={setErrorMessage} />
         </Box>
         <Text>
-          Forgot your password? Click <Link to="/reset-password"> here </Link>
+          Forgot your password? Click <Link to="/forgot-password"> here </Link>
           to reset it.
         </Text>
       </FormContainer>

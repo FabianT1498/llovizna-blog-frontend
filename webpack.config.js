@@ -19,6 +19,7 @@ module.exports = {
     },
     port: 3001,
     hot: true,
+    historyApiFallback: true,
   },
   resolve,
   module: {

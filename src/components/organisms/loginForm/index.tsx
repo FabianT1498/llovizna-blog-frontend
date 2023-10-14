@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-
-import { FormControl, FormErrorMessage, FormLabel, Button } from '@chakra-ui/react'
+import { useNavigate, useLocation } from 'react-router-dom'
+import { emailValidate, passwordValidate } from '@validations/authFormValidations'
+import { FormControl, FormErrorMessage, Button } from '@chakra-ui/react'
 
 import { LoginFormContainer } from './loginForm.styles'
-
-import { emailValidate, passwordValidate } from '@validations/authFormValidations'
 
 import { login } from '@services/authService'
 
@@ -19,18 +18,37 @@ type Props = {
   setErrorMessage: Function,
 }
 
+interface LocationState {
+  from: {
+    pathname: string;
+  };
+}
+
 const LoginForm = (props: Props) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting, isDirty, isValid},
   } = useForm()
 
   const { setShowAlert, setErrorMessage } = props
 
+  const [ isLoading, setIsLoading ] = useState(false)
+
+  const locationState = useLocation().state as {id: string};
+
+  const navigate = useNavigate()
+
+  const from = {pathname: locationState?.id ? locationState.id : '/'}
+
   const onSubmit = async (data: any) => {
+
+    setIsLoading(true)
+
     const res = await login(data)
 
+    setIsLoading(false)
+    
     if (res?.error && res.error?.fields && [400, 402, 403].includes(res.error.code)) {
       let messagesArr = Object.values(res.error.fields)
 
@@ -44,7 +62,7 @@ const LoginForm = (props: Props) => {
       setShowAlert(true)
       setErrorMessage(message)
     } else {
-      console.log('auth correcta')
+      navigate(from)
     }
   }
 
@@ -81,8 +99,9 @@ const LoginForm = (props: Props) => {
         colorScheme="teal"
         size="md"
         w="full"
-        // isLoading={isLoading}
+        isLoading={isLoading}
         loadingText="Logging In"
+        disabled={!isDirty || !isValid || isSubmitting}
       >
         Log In
       </Button>

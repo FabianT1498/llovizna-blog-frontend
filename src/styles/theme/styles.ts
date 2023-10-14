@@ -4,7 +4,7 @@ import type { StyleFunctionProps } from '@chakra-ui/styled-system'
 const styles = {
   global: (props: StyleFunctionProps) => ({
     html: {
-      fontSize: { base: '0.875rem', sm: '1rem', lg: '1.05rem' },
+      fontSize: { base: '0.875rem', md: '1rem', lg: '1.05rem' },
     },
     body: {
       color: mode('gray.800', 'whiteAlpha.900')(props),
