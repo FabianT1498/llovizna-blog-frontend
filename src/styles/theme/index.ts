@@ -15,6 +15,7 @@ import {
   FormError,
   Alert,
   Link,
+  Spinner,
 } from './chakraUIComponents'
 
 const theme = extendBaseTheme({
@@ -27,6 +28,7 @@ const theme = extendBaseTheme({
     FormError,
     Alert,
     Link,
+    Spinner,
   },
   textStyles,
   colors,

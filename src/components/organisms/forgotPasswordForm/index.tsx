@@ -2,20 +2,12 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { emailValidate } from '@validations/authFormValidations'
-import {
-  FormControl,
-  Button,
-  Alert,
-  AlertIcon,
-  Container,
-  CircularProgress,
-} from '@chakra-ui/react'
+import { FormControl, Button, Alert, AlertIcon, Container } from '@chakra-ui/react'
 
 import { FormContainer } from './forgotPasswordForm.styles'
 
 import { forgotPassword } from '@services/authService'
 
-import { Label } from '@components/atoms/label/label.styles'
 import { Input } from '@components/atoms/input/input.styles'
 
 type Props = {
@@ -65,7 +57,7 @@ const ForgotPasswordForm = (props: Props) => {
   }
 
   return (
-    <Container w={{ base: '80%' }}>
+    <Container>
       <FormContainer noValidate onSubmit={handleSubmit(onSubmit)}>
         <FormControl isInvalid={!!errors.email} mb={{ base: '4' }}>
           <Input
@@ -92,7 +84,7 @@ const ForgotPasswordForm = (props: Props) => {
         </Button>
       </FormContainer>
       {(errors?.email || error !== '') && (
-        <Alert borderRadius={['2xl']} status="error">
+        <Alert borderRadius={['2xl']} status="error" fontSize={{ base: 'sm' }}>
           <AlertIcon />
           {errors?.email?.message ? errors?.email?.message.toString() : error}
         </Alert>

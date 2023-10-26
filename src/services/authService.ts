@@ -10,7 +10,6 @@ const loginCb = async (data: any): Promise<ServerResponse<User>> => {
     transformResponse: [(result: any) => JSON.parse(result)],
   })
 
-  console.log(response)
   localStorage.setItem('authUser', JSON.stringify(response.data.data))
 
   return response.data
@@ -26,14 +25,28 @@ const forgotPasswordCb = async (data: any): Promise<ServerResponse<any>> => {
   return response.data
 }
 
+const validateResetTokenCb = async (data: any): Promise<ServerResponse<any>> => {
+  const response = await http.get(`${authUrl}/reset-password/${data.token}`)
+  return response.data
+}
+
 const getAuthUser = (): User | null => {
   const user = localStorage.getItem('authUser')
   return user ? JSON.parse(user) : null
+}
+
+const resetPasswordCb = async (data: any): Promise<ServerResponse<any>> => {
+  const response = await http.post(`${authUrl}/reset-password`, data)
+  return response.data
 }
 
 const login = async (data: any) => handleAsync < User > (async () => await loginCb(data))
 const register = async (data: any) => handleAsync < User > (async () => await registerCb(data))
 const forgotPassword = async (data: any) =>
   handleAsync < any > (async () => await forgotPasswordCb(data))
+const validateResetToken = async (data: any) =>
+  handleAsync < any > (async () => await validateResetTokenCb(data))
+const resetPassword = async (data: any) =>
+  handleAsync < any > (async () => await resetPasswordCb(data))
 
-export { login, register, getAuthUser, forgotPassword }
+export { login, register, getAuthUser, forgotPassword, validateResetToken, resetPassword }

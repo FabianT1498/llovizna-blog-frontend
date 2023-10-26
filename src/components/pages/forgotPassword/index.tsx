@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, Alert as ChakraAlert, AlertIcon, AlertDescription } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
 
 import { ForgotPasswordContainer, FormContainer, AlertContainer } from './forgotPassword.styles'
 import Link from '@components/atoms/link/link.styles'
@@ -28,10 +28,12 @@ const ForgotPassword = (props: Props) => {
           </>
         ) : (
           <>
-            <Alert
-              title="Reset password link was submitted!"
-              description="Please check out your email inbox"
-            />
+            <AlertContainer>
+              <Alert
+                title="Reset password link was submitted!"
+                description="Please check out your email inbox"
+              />
+            </AlertContainer>
             <Text>
               Return to the <Link to="/">login</Link> page
             </Text>

@@ -6,6 +6,7 @@ const alertContainerStyles = {
   alignItems: 'center',
   justifyContent: 'center',
   textAlign: 'center',
+  h: 'full',
 }
 
 const AlertContainer = chakra(ChakraAlert, { baseStyle: alertContainerStyles })

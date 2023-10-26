@@ -2,13 +2,6 @@ import React from 'react'
 import { AlertIcon, AlertTitle, AlertDescription, AlertStatus } from '@chakra-ui/react'
 import { AlertContainer } from './alert.styles'
 
-const alertContainerStyles = {
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  textAlign: 'center',
-}
-
 type Props = {
   children?: React.ReactNode,
   className?: string,

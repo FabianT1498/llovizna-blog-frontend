@@ -26,7 +26,8 @@ const formContainerStyles = {
 }
 
 const alertContainerStyles = {
-  w: { base: '80%' },
+  w: { base: 'full' },
+  h: { base: '60%' },
   mb: { base: '5' },
 }
 

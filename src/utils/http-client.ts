@@ -33,7 +33,7 @@ instance.interceptors.response.use(
   }
 )
 
-const get = (url: string, params: any, config = {}) => instance.get(url, { params, ...config })
+const get = (url: string, params: any = {}, config = {}) => instance.get(url, { params, ...config })
 const post = (url: string, data: any, config = {}) => instance.post(url, data, config)
 
 const methods = { get, post }
